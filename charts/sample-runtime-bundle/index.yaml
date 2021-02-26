@@ -8,6 +8,6 @@ entries:
     icon: https://salaboy.files.wordpress.com/2018/01/acitiviti_icon_fullcolor_github_400x400.png
     name: sample-runtime-bundle
     urls:
-    - https://github.com/dhruvarora-mriirs/helm-repo/sample-runtime-bundle-0.0.1-SNAPSHOT.tgz
+    - https://github.com/dhruvarora-mriirs/helm-repo/blob/gh-pages/charts/sample-runtime-bundle/sample-runtime-bundle-0.0.1-SNAPSHOT.tgz
     version: 0.0.1-SNAPSHOT
 generated: "2021-02-26T13:13:42.637577+05:30"
