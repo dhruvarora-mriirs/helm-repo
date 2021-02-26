@@ -2,12 +2,12 @@ apiVersion: v1
 entries:
   sample-runtime-bundle:
   - apiVersion: v1
-    created: "2021-02-26T13:13:42.8402633+05:30"
+    created: "2021-02-26T16:41:26.7505337+05:30"
     description: A Helm chart for Activiti Cloud Runtime Bundle Example
-    digest: 94ef55cce561ec1bd763eeada04192ddd9a47380299762cf11215049ad4d42d3
+    digest: 8ce966dd01c9a90e7e4422a6f8c311c8a839e656cc30837497c6aa3600140e9e
     icon: https://salaboy.files.wordpress.com/2018/01/acitiviti_icon_fullcolor_github_400x400.png
     name: sample-runtime-bundle
     urls:
-    - https://github.com/dhruvarora-mriirs/helm-repo/sample-runtime-bundle-0.0.1-SNAPSHOT.tgz
+    - https://dhruvarora-mriirs.github.io/helm-repo/sample-runtime-bundle-0.0.1-SNAPSHOT.tgz
     version: 0.0.1-SNAPSHOT
-generated: "2021-02-26T13:13:42.637577+05:30"
+generated: "2021-02-26T16:41:26.7345332+05:30"
