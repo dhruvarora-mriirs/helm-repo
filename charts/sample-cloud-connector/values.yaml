@@ -20,15 +20,7 @@ global:
  ## Most likely this will be just one host, but in the event more hosts are needed, this is an array
  ingress:
  hostName: ""
-db:
- uri: ""
- name: activitipostgresql
- deployPostgres: false
- port: 5432
- 
-activitipostgresql:
- postgresPassword: activiti
- 
+
 ## Allows the specification of additional environment variables
 extraEnv: |
  # - name: ACT_KEYCLOAK_URL
@@ -36,17 +28,17 @@ extraEnv: |
  # configMapKeyRef:
  # name: {{ .Release.Name }}-keycloak-http
  # key: expose-keycloak-service-key
- 
+
 javaOpts:
  xmx: 768m
  xms: 512m
  other: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90
 image:
- repository: activiti-runtime-bundle-custom
+ repository: activiti-cloud-connector-custom
  tag: latest
  pullPolicy: IfNotPresent
 service:
- name: sample-activiti7-rb-app
+ name: sample-activiti7-cc-app
  type: ClusterIP
  externalPort: 80
  internalPort: 8080
@@ -69,8 +61,7 @@ readinessProbe:
  successThreshold: 1
  timeoutSeconds: 3
 terminationGracePeriodSeconds: 20
- 
- 
+
 ingress:
  ## Set to true to enable ingress record generation
  enabled: false
@@ -90,13 +81,3 @@ ingress:
  nginx.ingress.kubernetes.io/enable-cors: "true"
  nginx.ingress.kubernetes.io/cors-allow-headers: "X-Forwarded-For, X-Forwarded-Proto, X-Forwarded-Port, X-Forwarded-Prefix,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-CSRF-Token,Access-Control-Request-Headers,Access-Control-Request-Method,accept,Keep-Alive"
  nginx.ingress.kubernetes.io/x-forwarded-prefix: "true"
-
-#only needed when using sck8s
-rbac:
-  create: true
-serviceAccount:
-  create: true
-
-## Add additional volumes and mounts
-extraVolumes: |
-extraVolumeMounts: |
