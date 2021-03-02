@@ -1,1 +1,1 @@
-# Java application
+# Helm Chart for Sample Activiti Runtime Bundle
